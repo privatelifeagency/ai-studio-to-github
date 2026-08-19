@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "GHL AI Studio → GitHub Exporter",
+  "version": "0.1.0",
+  "description": "Backup your GoHighLevel AI Studio projects to GitHub in one click.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://backend.leadconnectorhq.com/*",
+    "https://api.github.com/*",
+    "https://github.com/login/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leadgen-vibe-ai-builder.leadconnectorhq.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-hook.js",
+        "popup.html",
+        "popup.js",
+        "popup.css"
+      ],
+      "matches": ["https://leadgen-vibe-ai-builder.leadconnectorhq.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

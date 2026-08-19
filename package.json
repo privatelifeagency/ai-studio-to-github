@@ -1,0 +1,10 @@
+{
+  "name": "ghl-aistudio-exporter",
+  "version": "0.1.0",
+  "description": "Chrome extension that pushes GoHighLevel AI Studio projects to GitHub.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/marker.test.js tests/github-client.test.js"
+  }
+}
