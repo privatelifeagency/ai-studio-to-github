@@ -7,7 +7,7 @@
 // If you fork this extension and want to use your own OAuth App: copy
 // config.example.js to config.js and paste your own Client ID here.
 
-export const GITHUB_CLIENT_ID = "Ov23liOr9V8RNH5rgR57";
+export const GITHUB_CLIENT_ID = "GITHUB_CLIENT_ID_GOES_HERE";
 
 // OAuth scopes requested during Device Flow. `repo` gives read+write access
 // to private and public repos, which is required so users can push backups
